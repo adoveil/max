@@ -13,7 +13,7 @@ const postcssReporter = require('postcss-reporter');
 module.exports = (options) => ({
   entry: options.entry,
   output: Object.assign({ // Compile into js/build.js
-    path: path.resolve(process.cwd(), 'build'),
+    path: path.resolve(process.cwd(), 'docs'),
     publicPath: '/',
   }, options.output), // Merge with env dependent settings
   module: {
