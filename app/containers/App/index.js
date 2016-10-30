@@ -14,7 +14,7 @@ import 'sanitize.css/sanitize.css';
 
 import styles from './styles.css';
 
-function App() {
+function App(props) {
   return (
     <div className={styles.wrapper}>
       <Helmet
@@ -24,7 +24,7 @@ function App() {
           { name: 'description', content: 'A React.js Boilerplate application' },
         ]}
       />
-      Hello :)
+      {React.Children.toArray(props.children)}
     </div>
   );
 }
