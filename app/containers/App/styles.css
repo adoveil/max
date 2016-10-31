@@ -1,4 +1,6 @@
-/* Global styles */
+:root {
+  --gutter-width: 1.5rem;
+}
 
 html,
 body {
@@ -8,29 +10,17 @@ body {
 
 body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-body.fontLoaded {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
 }
 
 :global(#app) {
-  background-color: #FAFAFA;
+  background-color: var(--white);
   min-height: 100%;
   min-width: 100%;
 }
 
 .wrapper {
-  max-width: calc(768px + 16px * 2);
-  margin: 0 auto;
-  display: flex;
-  min-height: 100%;
-  padding: 0 16px;
-  flex-direction: column;
-}
-
-.logoWrapper {
-  padding: 2em 0;
+  padding: 0 var(--gutter-width);
 }
 
 .logo {

@@ -28,13 +28,20 @@ import configureStore from './store';
 // Import Language Provider
 import LanguageProvider from 'containers/LanguageProvider';
 
-// Observe loading of Open Sans (to remove open sans, remove the <link> tag in
-// the index.html file and this observer)
 import styles from 'containers/App/styles.css';
-const openSansObserver = new FontFaceObserver('Open Sans', {});
+const helvetica55Observer = new FontFaceObserver('Helvetica Neue LT W01_55 Roman', {});
 
 // When Open Sans is loaded, add a font-family using Open Sans to the body
-openSansObserver.load().then(() => {
+helvetica55Observer.load().then(() => {
+  document.body.classList.add(styles.fontLoaded);
+}, () => {
+  document.body.classList.remove(styles.fontLoaded);
+});
+
+const helvetica45Observer = new FontFaceObserver('Helvetica Neue LT W01_41488878', {});
+
+// When Open Sans is loaded, add a font-family using Open Sans to the body
+helvetica45Observer.load().then(() => {
   document.body.classList.add(styles.fontLoaded);
 }, () => {
   document.body.classList.remove(styles.fontLoaded);

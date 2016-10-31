@@ -8,7 +8,14 @@ const webpack = require('webpack');
 // PostCSS plugins
 const cssnext = require('postcss-cssnext');
 const postcssFocus = require('postcss-focus');
+const postcssLost = require('lost');
+const postcssHide = require('postcss-hide');
+const postcssInlineSVG = require('postcss-inline-svg');
 const postcssReporter = require('postcss-reporter');
+const webpackPostcssTools = require('webpack-postcss-tools');
+
+const map = webpackPostcssTools.makeVarMap('./app/styles/variables.css');
+const variables = map.vars;
 
 module.exports = (options) => ({
   entry: options.entry,
@@ -72,10 +79,19 @@ module.exports = (options) => ({
     }),
   ]),
   postcss: () => [
-    postcssFocus(), // Add a :focus to every :hover
-    cssnext({ // Allow future CSS features to be used, also auto-prefixes the CSS...
+    cssnext({
+      features: {
+        customProperties: {
+          variables,
+          warnings: false,
+        },
+      },
       browsers: ['last 2 versions', 'IE > 10'], // ...based on this browser list
     }),
+    postcssHide(),
+    postcssFocus(), // Add a :focus to every :hover
+    postcssLost(),
+    postcssInlineSVG(),
     postcssReporter({ // Posts messages from plugins to the terminal
       clearMessages: true,
     }),

@@ -1,0 +1,39 @@
+:root {
+
+}
+
+.title {
+  font-size: 1.375rem;
+  letter-spacing: 0.25rem;
+}
+
+.list {
+  margin: 1rem 0;
+  padding: 0;
+  list-style: none;
+  line-height: 1.25rem;
+}
+
+.form {
+  margin: 2.5rem 0 0;
+}
+
+.label {
+  & span {
+    display: block;
+    letter-spacing: 0.125rem;
+  }
+
+  & input[type='email'] {
+    display: block;
+    width: 100%;
+    appearance: none;
+    border: 0;
+    border-bottom: 2px solid var(--black);
+    line-height: 2rem;
+    background-color: transparent;
+    outline: none;
+    letter-spacing: 0.125rem;
+    text-transform: uppercase;
+  }
+}
