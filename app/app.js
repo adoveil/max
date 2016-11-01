@@ -33,18 +33,9 @@ const helvetica55Observer = new FontFaceObserver('Helvetica Neue LT W01_55 Roman
 
 // When Open Sans is loaded, add a font-family using Open Sans to the body
 helvetica55Observer.load().then(() => {
-  document.body.classList.add(styles.fontLoaded);
+  document.body.classList.add(styles.fontLoadedHelvetica55);
 }, () => {
-  document.body.classList.remove(styles.fontLoaded);
-});
-
-const helvetica45Observer = new FontFaceObserver('Helvetica Neue LT W01_41488878', {});
-
-// When Open Sans is loaded, add a font-family using Open Sans to the body
-helvetica45Observer.load().then(() => {
-  document.body.classList.add(styles.fontLoaded);
-}, () => {
-  document.body.classList.remove(styles.fontLoaded);
+  document.body.classList.remove(styles.fontLoadedHelvetica55);
 });
 
 // Import i18n messages

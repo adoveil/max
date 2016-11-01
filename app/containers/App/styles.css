@@ -2,6 +2,14 @@
   --gutter-width: 1.5rem;
 }
 
+@custom-media --smallGlobal-viewport (width < 1024px);
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html,
 body {
   height: 100%;
@@ -11,16 +19,26 @@ body {
 body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
+  min-height: 100vh;
+}
+
+body.fontLoadedHelvetica55 {
+  font-family: var(--default-font-family), Helvetica, Arial, sans-serif;
 }
 
 :global(#app) {
   background-color: var(--white);
-  min-height: 100%;
+  min-height: 100vh;
   min-width: 100%;
 }
 
 .wrapper {
   padding: 0 var(--gutter-width);
+  min-height: 100vh;
+
+  @media(--smallGlobal-viewport) {
+    padding: 0;
+  }
 }
 
 .logo {

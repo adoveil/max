@@ -1,0 +1,13 @@
+.wrapper {
+  font-size: 0.6875rem;
+  line-height: 1.5rem;
+  margin: 0 0 2rem;
+
+  & p {
+    margin: 0;
+  }
+}
+
+.name {
+  color: var(--gray);
+}

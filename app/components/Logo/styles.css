@@ -1,5 +1,4 @@
 :root {
-  --Logo-width: 19rem;
   --Logo-height: 4rem;
 }
 
@@ -8,6 +7,5 @@
   background-image: svg-load('assets/maxfield-logo-2016.svg', fill=#000);
   background-repeat: no-repeat;
   background-position: center;
-  width: var(--Logo-width);
   height: var(--Logo-height);
 }

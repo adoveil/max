@@ -1,0 +1,28 @@
+@custom-media --smallGlobal-viewport (width < 1024px);
+
+.wrapper {
+  position: relative;
+  font-family: var(--default-font-family--light);
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+  border-bottom: 0.125rem solid var(--black);
+  letter-spacing: 0.375rem;
+  padding-bottom: 0.25rem;
+  z-index: 100;
+
+  & span {
+    display: block;
+  }
+
+  @media (--smallGlobal-viewport) {
+    text-align: center;
+
+    & span {
+      display: inline-block;
+
+      &:first-child {
+        margin-right: 0.875rem;
+      }
+    }
+  }
+}

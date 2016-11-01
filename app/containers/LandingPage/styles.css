@@ -1,6 +1,196 @@
+:root {
+  --movie-width: 8/12;
+  --movie-moveToCenter: 2/12;
+  --movie-ratio: 56.25%;
+  --gutter-width: 20px;
+  --underConstruction-width: 3/12;
+  --underConstruction-moveToCenter: 8/12;
+  --popupStore-width: 3/12;
+  --popupStore-moveToCenter: 1/12;
+  --offices-width: 2/12;
+  --offices-moveToCenter: 10/12;
+}
+
+@lost gutter 20px;
+@lost cycle none;
+
+@custom-media --small-viewport (max-width: 480px);
+@custom-media --medium-viewport (width > 480px) and (width < 1024px);
+@custom-media --smallGlobal-viewport (width < 1024px);
+@custom-media --large-viewport (width > 1009px) and (width < 1440px);
+
 .wrapper {
+  position: relative;
+  min-height: 100vh;
   font-family: var(--default-font-family);
   font-size: 0.75rem;
   color: var(--black);
   line-height: 1rem;
+}
+
+.background {
+  lost-utility: clearfix;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+
+  @media (--smallGlobal-viewport) {
+    position: fixed;
+  }
+}
+
+.asset {
+  position: relative;
+  min-height: 100vh;
+  lost-column: var(--movie-width);
+  lost-move: var(--movie-moveToCenter);
+
+  @media (--smallGlobal-viewport) {
+    lost-column: 1;
+    lost-move: 0/12;
+  }
+}
+
+.movie {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    display: block;
+    padding-top: var(--movie-ratio);
+  }
+
+  @media (--smallGlobal-viewport) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100vh;
+
+    &::before {
+      content: none;
+    }
+  }
+
+  & video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+
+    @media (--smallGlobal-viewport) {
+      width: initial;
+      min-width: 100%;
+      min-height: 100vh;
+    }
+  }
+}
+
+.mask {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--white);
+  opacity: 0.7;
+  z-index: 2;
+
+  @media (--smallGlobal-viewport) {
+    opacity: 0.85;
+  }
+}
+
+.container {
+  lost-utility: clearfix;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+}
+
+.logo {
+  position: absolute;
+  left: calc(var(--movie-moveToCenter) * 100%);
+  text-align: center;
+  lost-column: var(--movie-width);
+  margin-top: 4vh;
+  z-index: 4;
+
+  @media (--smallGlobal-viewport) {
+    position: relative;
+    lost-column: 1;
+    left: 0;
+    margin: 2rem 0 0;
+  }
+}
+
+.underConstruction {
+  position: absolute;
+  lost-column: var(--underConstruction-width);
+  left: calc(var(--underConstruction-moveToCenter) * 100%);
+  transform: translateY(20vh);
+  z-index: 4;
+
+  @media (--smallGlobal-viewport) {
+    position: relative;
+    lost-column: 8/12;
+    margin: 2rem 0;
+    transform: translateY(0);
+    left: calc(2 / 12 * 100%);
+  }
+}
+
+.popupStore {
+  position: absolute;
+  lost-column: var(--popupStore-width);
+  left: calc(var(--popupStore-moveToCenter) * 100%);
+  transform: translateY(30vh);
+  z-index: 4;
+
+  @media (--smallGlobal-viewport) {
+    text-align: center;
+    position: relative;
+    lost-column: 8/12;
+    margin: 4rem 0 2rem;
+    transform: translateY(0);
+    left: calc(2 / 12 * 100%);
+  }
+}
+
+.offices {
+  position: absolute;
+  lost-column: var(--offices-width);
+  left: calc((var(--offices-moveToCenter) * 100%) + 20px);
+  transform: translateY(40vh);
+  z-index: 4;
+
+  @media (--smallGlobal-viewport) {
+    position: relative;
+    lost-column: 8/12;
+    margin: 4rem 0 2rem;
+    transform: translateY(0);
+    left: calc(2 / 12 * 100%);
+    text-align: center;
+  }
+
+  & > div {
+    @media (--smallGlobal-viewport) {
+      display: inline-block;
+      margin-right: 40px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
 }
