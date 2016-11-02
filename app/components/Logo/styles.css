@@ -3,8 +3,7 @@
 }
 
 .wrapper {
-  background-image: svg-load('assets/maxfield-logo-2016.svg', fill=#000);
-  background-repeat: no-repeat;
-  background-position: center;
-  height: var(--Logo-height);
+  & img {
+    height: var(--Logo-height);
+  }
 }

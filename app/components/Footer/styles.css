@@ -1,21 +1,6 @@
-@custom-media --smallGlobal-viewport (width < 1024px);
 
 .wrapper {
-  position: absolute;
-  bottom: 10%;
-  left: 50%;
-  transform: translate(-50%, 100%);
-  z-index: 5;
-
-  @media (--smallGlobal-viewport) {
-    lost-column: 1;
-    text-align: center;
-    position: relative;
-    bottom: inherit;
-    left: inherit;
-    transform: translate(0, 0);
-    margin: 2rem 0;
-  }
+  text-align: center;
 
   & ul {
     margin: 0;

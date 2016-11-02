@@ -10,6 +10,7 @@ const cssnext = require('postcss-cssnext');
 const postcssFocus = require('postcss-focus');
 const postcssLost = require('lost');
 const postcssHide = require('postcss-hide');
+const postcssMixins = require('postcss-mixins');
 const postcssInlineSVG = require('postcss-inline-svg');
 const postcssReporter = require('postcss-reporter');
 const webpackPostcssTools = require('webpack-postcss-tools');
@@ -60,7 +61,7 @@ module.exports = (options) => ({
       loader: 'json-loader',
     }, {
       test: /\.(mp4|webm)$/,
-      loader: 'url-loader?limit=10000',
+      loader: 'file-loader',
     }],
   },
   plugins: options.plugins.concat([
@@ -79,6 +80,11 @@ module.exports = (options) => ({
     }),
   ]),
   postcss: () => [
+    postcssMixins({
+      mixinsDir: [
+        path.join(path.normalize(path.join(__dirname, '../../')), 'app', 'styles', 'mixins'),
+      ],
+    }),
     cssnext({
       features: {
         customProperties: {

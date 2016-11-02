@@ -1,8 +1,8 @@
 :root {
-  --gutter-width: 1.5rem;
+  --gutter-width: 20px;
 }
 
-@custom-media --smallGlobal-viewport (width < 1024px);
+@mixin media-queries;
 
 *,
 *::before,
@@ -33,16 +33,19 @@ body.fontLoadedHelvetica55 {
 }
 
 .wrapper {
-  padding: 0 var(--gutter-width);
   min-height: 100vh;
+  width: var(--default-max-width--extraLarge);
+  margin: 0 auto;
+
+  @media (--large-viewport) {
+    width: var(--default-max-width--large);
+  }
+
+  @media (--medium-viewport) {
+    width: var(--default-max-width--medium);
+  }
 
   @media (--smallGlobal-viewport) {
-    padding: 0;
+    width: 100%;
   }
-}
-
-.logo {
-  width: 100%;
-  margin: 0 auto;
-  display: block;
 }
