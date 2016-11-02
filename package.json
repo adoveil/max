@@ -180,7 +180,11 @@
         true,
         {
           "ignoreProperties": [
-            "composes"
+            "composes",
+            "hide",
+            "lost-column",
+            "lost-move",
+            "lost-utility"
           ]
         }
       ],

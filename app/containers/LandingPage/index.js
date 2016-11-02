@@ -1,6 +1,6 @@
+/* eslint-disable global-require */
 import React from 'react';
 import Helmet from 'react-helmet';
-import Video from 'react-html5video';
 
 import Logo from '../../components/Logo';
 import Adress from '../../components/Adress';
@@ -15,12 +15,12 @@ const LandingPage = () => (
     <div className={styles.background}>
       <div className={styles.asset}>
         <div className={styles.movie}>
-          <video
+          {/* <video
             src={require('./static/12_STILL_D_A.mp4')}
             autoPlay
             loop
             muted
-          />
+          /> */}
         </div>
       </div>
       <div className={styles.mask}></div>
