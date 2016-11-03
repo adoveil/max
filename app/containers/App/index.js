@@ -18,10 +18,10 @@ function App(props) {
   return (
     <div className={styles.wrapper}>
       <Helmet
-        titleTemplate="%s - React.js Boilerplate"
-        defaultTitle="React.js Boilerplate"
+        title="Maxfield - Site under construction"
         meta={[
-          { name: 'description', content: 'A React.js Boilerplate application' },
+          { name: 'name', content: 'Home' },
+          { name: 'description', content: 'More than a destination: It is a state of mind. Luxury boutique with curated designer and vintage collections for men and women.' },
         ]}
       />
       {React.Children.toArray(props.children)}

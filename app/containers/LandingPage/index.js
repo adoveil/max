@@ -14,9 +14,27 @@ import styles from './styles.css';
 const LandingPage = () => (
   <div className={styles.wrapper}>
     <Helmet
-      title="Home Page"
+      title="Maxfield - Site under construction"
       meta={[
-        { name: 'description', content: 'A React.js Boilerplate application homepage' },
+        { name: 'name', content: 'Home' },
+        { name: 'description', content: 'More than a destination: It is a state of mind. Luxury boutique with curated designer and vintage collections for men and women.' },
+        { name: 'twitter:title', content: 'Home' },
+        { name: 'twitter:image', content: './static/logo-maxfield.png' },
+        { name: 'twitter:url', content: 'http://www.maxfieldla.com/' },
+        { name: 'twitter:card', content: 'summary' },
+        { property: 'og:site_name', content: 'Maxfield' },
+        { property: 'og:title', content: 'Home' },
+        { property: 'og:url', content: 'http://www.maxfieldla.com/' },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:image', content: './static/logo-maxfield.png' },
+        { itemprop: 'name', content: 'Home' },
+        { itemprop: 'url', content: 'http://www.maxfieldla.com/' },
+        { itemprop: 'thumbnailUrl', content: './static/logo-maxfield.png' },
+        { itemprop: 'image', content: './static/logo-maxfield.png' },
+      ]}
+      link={[
+        { rel: 'canonical', href: 'http://www.maxfieldla.com/' },
+        { rel: 'image_src', href: './static/logo-maxfield.png' },
       ]}
     />
     <div className={styles.container}>
@@ -36,6 +54,12 @@ const LandingPage = () => (
           <div className={styles.mask}></div>
         </div>
         <div className={styles.inner}>
+          <div className={styles.underConstruction}>
+            <UnderConstruction />
+          </div>
+          <div className={styles.popupStore}>
+            <PopupStore />
+          </div>
           <div className={styles.offices}>
             <Adress
               name="Los Angeles"
@@ -55,12 +79,6 @@ const LandingPage = () => (
               adress2="Beverly Hills, CA 90210"
               phone="(310) 275 8818"
             />
-          </div>
-          <div className={styles.underConstruction}>
-            <UnderConstruction />
-          </div>
-          <div className={styles.popupStore}>
-            <PopupStore />
           </div>
         </div>
       </div>

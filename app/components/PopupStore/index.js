@@ -4,7 +4,8 @@ import styles from './styles.css';
 const PopupStore = () => (
   <div className={styles.wrapper}>
     <div className={styles.title}>
-      Popup stores
+      <span>Popup</span>
+      <span>stores</span>
     </div>
     <ul className={styles.list}>
       <li>Fear Of God</li>
@@ -28,16 +29,13 @@ const PopupStore = () => (
         <div id="mc_embed_signup_scroll">
           <div className="mc-field-group">
             <label htmlFor="mce-EMAIL" className={styles.label}>
-              <span>
-                sign in to opening dates
-              </span>
               <input
                 type="email"
                 value=""
                 name="EMAIL"
                 className="required email"
                 id="mce-EMAIL"
-                placeholder="Email Adress"
+                placeholder="Sign up for opening dates"
               />
             </label>
             <div
@@ -52,7 +50,7 @@ const PopupStore = () => (
             </div>
             <input
               type="submit"
-              value="Sign in"
+              value="Submit"
               name="subscribe"
               id="mc-embedded-subscribe"
               className="button"

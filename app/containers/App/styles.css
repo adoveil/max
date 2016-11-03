@@ -45,7 +45,11 @@ body.fontLoadedHelvetica55 {
     width: var(--default-max-width--medium);
   }
 
-  @media (--smallGlobal-viewport) {
+  @media (--small-viewport) {
+    width: 100%;
+  }
+
+  @media (--extraSmall-viewport) {
     width: 100%;
   }
 }
