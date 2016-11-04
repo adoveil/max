@@ -29,7 +29,7 @@ import configureStore from './store';
 import LanguageProvider from 'containers/LanguageProvider';
 
 import styles from 'containers/App/styles.css';
-const helvetica55Observer = new FontFaceObserver('Helvetica Neue LT W01_55 Roman', {});
+const helvetica55Observer = new FontFaceObserver('Helvetica LT W01 Roman', {});
 
 // When Open Sans is loaded, add a font-family using Open Sans to the body
 helvetica55Observer.load().then(() => {

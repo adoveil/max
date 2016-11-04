@@ -21,7 +21,7 @@ const variables = map.vars;
 module.exports = (options) => ({
   entry: options.entry,
   output: Object.assign({ // Compile into js/build.js
-    path: path.resolve(process.cwd(), 'docs'),
+    path: path.resolve(process.cwd(), 'dist'),
     publicPath: '/',
   }, options.output), // Merge with env dependent settings
   module: {

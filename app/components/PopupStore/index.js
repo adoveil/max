@@ -5,10 +5,8 @@ export default class PopupStore extends React.Component {
 
   componentWillMount() {
     const script = document.createElement('script');
-
     script.src = '//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js';
     script.async = true;
-
     document.body.appendChild(script);
   }
 
@@ -16,8 +14,7 @@ export default class PopupStore extends React.Component {
     return (
       <div className={styles.wrapper}>
         <div className={styles.title}>
-          <span>Popup</span>
-          <span>stores</span>
+          Popup Stores
         </div>
         <ul className={styles.list}>
           <li>Fear Of God</li>

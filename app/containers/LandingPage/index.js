@@ -45,7 +45,7 @@ const LandingPage = () => (
         <div className={styles.background}>
           <div className={styles.movie}>
             <video
-              src={require('./static/12_STILL_D_A.mp4')}
+              src={require('./static/04_STILL_A_1_A.mp4')}
               autoPlay
               loop
               muted

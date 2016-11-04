@@ -135,6 +135,10 @@
 }
 
 .movie {
+  background-image: url('./static/poster.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   lost-column: 8/12 0 20px;
   lost-move: 2/12;
   overflow: hidden;
@@ -156,11 +160,19 @@
   @media (--small-viewport) {
     lost-column: 12/12 0 20px;
     lost-move: 0/12;
+
+    & video {
+      display: none;
+    }
   }
 
   @media (--extraSmall-viewport) {
     lost-column: 12/12 0 20px;
     lost-move: 0/12;
+
+    & video {
+      display: none;
+    }
   }
 }
 
@@ -171,7 +183,7 @@
   bottom: 0;
   left: 0;
   background-color: var(--white);
-  opacity: 0.8;
+  opacity: 0.75;
   z-index: 1;
 }
 
