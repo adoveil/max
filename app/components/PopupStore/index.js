@@ -56,6 +56,7 @@ export default class PopupStore extends React.Component {
                     tabIndex="-1"
                   />
                 </div>
+                <div className="response" id="mce-success-response" style={{ display: 'none' }}></div>
                 <input
                   type="submit"
                   value="Submit"
@@ -64,10 +65,6 @@ export default class PopupStore extends React.Component {
                   className="button"
                 />
               </div>
-            </div>
-            <div id="mce-responses">
-              <div className="response" id="mce-error-response" style={{ display: 'none' }}></div>
-              <div className="response" id="mce-success-response" style={{ display: 'none' }}></div>
             </div>
           </form>
         </div>

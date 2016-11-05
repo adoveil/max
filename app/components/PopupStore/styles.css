@@ -1,3 +1,8 @@
+:root {
+  --error-color: var(--red);
+  --valid-color: var(--green);
+}
+
 @mixin media-queries;
 
 .title {
