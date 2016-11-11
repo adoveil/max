@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './styles.css';
 
-export default class PopupStore extends React.Component {
+export default class TemporaryShops extends React.Component {
 
   componentWillMount() {
     const script = document.createElement('script');
@@ -14,7 +14,7 @@ export default class PopupStore extends React.Component {
     return (
       <div className={styles.wrapper}>
         <div className={styles.title}>
-          Popup Stores
+          Temporary Shops
         </div>
         <ul className={styles.list}>
           <li>Fear Of God</li>

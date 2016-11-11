@@ -5,7 +5,7 @@ import Helmet from 'react-helmet';
 
 import Logo from '../../components/Logo';
 import Adress from '../../components/Adress';
-import PopupStore from '../../components/PopupStore';
+import TemporaryShops from '../../components/TemporaryShops';
 import UnderConstruction from '../../components/UnderConstruction';
 import Footer from '../../components/Footer';
 
@@ -45,7 +45,7 @@ const LandingPage = () => (
         <div className={styles.background}>
           <div className={styles.movie}>
             <video
-              src={require('./static/04_STILL_A_1_A.mp4')}
+              src={require('./static/maxfield01.mp4')}
               autoPlay
               loop
               muted
@@ -57,8 +57,8 @@ const LandingPage = () => (
           <div className={styles.underConstruction}>
             <UnderConstruction />
           </div>
-          <div className={styles.popupStore}>
-            <PopupStore />
+          <div className={styles.temporaryShops}>
+            <TemporaryShops />
           </div>
           <div className={styles.offices}>
             <Adress
