@@ -1,9 +1,21 @@
 :root {
   --Logo-height: 4rem;
+  --Logo-height-small: 3rem;
+  --Logo-height-extraSmall: 2rem;
 }
+
+@mixin media-queries;
 
 .wrapper {
   & img {
     height: var(--Logo-height);
+
+    @media (--small-viewport) {
+      height: var(--Logo-height-small);
+    }
+
+    @media (--extraSmall-viewport) {
+      height: var(--Logo-height-extraSmall);
+    }
   }
 }
