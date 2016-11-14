@@ -1,7 +1,7 @@
 :root {
   --Logo-height: 4rem;
   --Logo-height-small: 3rem;
-  --Logo-height-extraSmall: 2rem;
+  --Logo-height-extraSmall: 2.5rem;
 }
 
 @mixin media-queries;

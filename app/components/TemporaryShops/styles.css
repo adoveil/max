@@ -9,6 +9,11 @@
   font-size: 1.375rem;
   letter-spacing: 0.25rem;
   line-height: 2rem;
+
+  @media (--extraSmall-viewport) {
+    font-size: 1rem;
+    letter-spacing: 0.125rem;
+  }
 }
 
 .list {
