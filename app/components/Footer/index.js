@@ -6,13 +6,13 @@ const Footer = () => (
   <div className={styles.wrapper}>
     <ul>
       <li>
-        <a href="./">contact us</a>
+        <a href="mailto:info@maxfieldla.com">contact us</a>
       </li>
       <li>
-        <a href="./">facebook</a>
+        <a href="https://www.facebook.com/maxfieldla.malibu?fref=ts">facebook</a>
       </li>
       <li>
-        <a href="./">instagram</a>
+        <a href="https://www.instagram.com/maxfieldla/">instagram</a>
       </li>
     </ul>
   </div>

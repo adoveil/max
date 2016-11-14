@@ -28,7 +28,7 @@ export default class TemporaryShops extends React.Component {
         </ul>
         <div id="mc_embed_signup" className={styles.form}>
           <form
-            action="//doveil.us4.list-manage.com/subscribe/post?u=418842c9c77d6dd26c53b80bf&amp;id=a047d273df"
+            action="//maxfieldla.us11.list-manage.com/subscribe/post?u=0282d9dcd0f4c4b8d49ae8b33&amp;id=5c7b311f40"
             method="post" id="mc-embedded-subscribe-form"
             name="mc-embedded-subscribe-form"
             className="validate"
