@@ -28,6 +28,20 @@
   & p {
     margin: 0;
   }
+
+  & a {
+    display: block;
+    color: var(--black);
+    text-decoration: none;
+
+    & span {
+      display: block;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 .name {

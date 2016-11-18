@@ -65,19 +65,25 @@ const LandingPage = () => (
               name="Los Angeles"
               adress="8825 Melrose Avenue"
               adress2="Los Angeles, CA 90069"
-              phone="(310) 274 8800"
+              adressURL="https://goo.gl/maps/y6U9uncB5f62"
+              phone="+01-310-274-8800"
+              formatedPhone="(310) 274 8800"
             />
             <Adress
               name="Malibu"
               adress="3939 Cross Creek Road"
               adress2="Malibu, CA 90265"
-              phone="(310) 270 9009"
+              adressURL="https://goo.gl/maps/WgJ8wyjYfm52"
+              phone="+01-310-270-9009"
+              formatedPhone="(310) 270 9009"
             />
             <Adress
-              name="maxfield bleu"
+              name="Maxfield Bleu"
               adress="301 North Canon Drive"
               adress2="Beverly Hills, CA 90210"
-              phone="(310) 275 8818"
+              adressURL="https://goo.gl/maps/cRsPCD19Kqo"
+              phone="+01-310-275-8818"
+              formatedPhone="(310) 275 8818"
             />
           </div>
         </div>
