@@ -9,7 +9,7 @@ const Footer = () => (
         <a href="mailto:info@maxfieldla.com">contact us</a>
       </li>
       <li>
-        <a href="https://www.facebook.com/maxfieldla.malibu?fref=ts">facebook</a>
+        <a href="https://www.facebook.com/MaxfieldLA/">facebook</a>
       </li>
       <li>
         <a href="https://www.instagram.com/maxfieldla/">instagram</a>
