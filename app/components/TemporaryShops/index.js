@@ -28,7 +28,7 @@ export default class TemporaryShops extends React.Component {
         </ul>
         <div id="mc_embed_signup" className={styles.form}>
           <form
-            action="//maxfieldla.us11.list-manage.com/subscribe/post?u=0282d9dcd0f4c4b8d49ae8b33&amp;id=5c7b311f40"
+            action="//maxfieldla.us11.list-manage.com/subscribe/post?u=0282d9dcd0f4c4b8d49ae8b33&amp;id=b311603328&amp;MERGE8=TemporaryShops"
             method="post" id="mc-embedded-subscribe-form"
             name="mc-embedded-subscribe-form"
             className="validate"
@@ -52,7 +52,7 @@ export default class TemporaryShops extends React.Component {
                 >
                   <input
                     type="text"
-                    name="b_418842c9c77d6dd26c53b80bf_a047d273df"
+                    name="b_0282d9dcd0f4c4b8d49ae8b33_b311603328"
                     tabIndex="-1"
                   />
                 </div>
