@@ -2,14 +2,14 @@
  * Create the store with asynchronously loaded reducers
  */
 
-import { createStore, applyMiddleware, compose } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import { fromJS } from 'immutable';
+import { composeWithDevTools } from 'redux-devtools-extension';
 import { routerMiddleware } from 'react-router-redux';
 import createSagaMiddleware from 'redux-saga';
 import createReducer from './reducers';
 
 const sagaMiddleware = createSagaMiddleware();
-const devtools = window.devToolsExtension || (() => (noop) => noop);
 
 export default function configureStore(initialState = {}, history) {
   // Create the store with two middlewares
@@ -20,15 +20,14 @@ export default function configureStore(initialState = {}, history) {
     routerMiddleware(history),
   ];
 
-  const enhancers = [
-    applyMiddleware(...middlewares),
-    devtools(),
-  ];
+  const composeEnhancers = composeWithDevTools({
+    name: 'App', actionsBlacklist: ['REDUX_STORAGE_SAVE'],
+  });
 
   const store = createStore(
     createReducer(),
     fromJS(initialState),
-    compose(...enhancers)
+    composeEnhancers(applyMiddleware(...middlewares))
   );
 
   // Extensions
