@@ -21,12 +21,11 @@ export default class TemporaryShops extends React.Component {
             <span>Off-White C/o Virgil Abloh</span>
             <sup>TM</sup>
           </li>
-          <li>Vetements</li>
           <li>Daft Punk</li>
           <li>Mathieu Cesar</li>
-          <li>Fear of God</li>
           <li>Mike Amiri</li>
           <li>Enfants Riches Déprimés</li>
+          <li>Fear of God</li>
         </ul>
         <div id="mc_embed_signup" className={styles.form}>
           <form
