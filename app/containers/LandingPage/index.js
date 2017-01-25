@@ -14,7 +14,7 @@ import styles from './styles.css';
 const LandingPage = () => (
   <div className={styles.wrapper}>
     <Helmet
-      title="Maxfield - Site under construction"
+      title="MAXFIELD"
       meta={[
         { name: 'name', content: 'Home' },
         { name: 'description', content: 'More than a destination: It is a state of mind. Luxury boutique with curated designer and vintage collections for men and women.' },
@@ -22,7 +22,7 @@ const LandingPage = () => (
         { name: 'twitter:image', content: './static/logo-maxfield.png' },
         { name: 'twitter:url', content: 'http://www.maxfieldla.com/' },
         { name: 'twitter:card', content: 'summary' },
-        { property: 'og:site_name', content: 'Maxfield' },
+        { property: 'og:site_name', content: 'MAXFIELD' },
         { property: 'og:title', content: 'Home' },
         { property: 'og:url', content: 'http://www.maxfieldla.com/' },
         { property: 'og:type', content: 'website' },

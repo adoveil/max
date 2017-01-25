@@ -18,7 +18,7 @@ function App(props) {
   return (
     <div className={styles.wrapper}>
       <Helmet
-        title="Maxfield - Site under construction"
+        title="MAXFIELD"
         meta={[
           { name: 'name', content: 'Home' },
           { name: 'description', content: 'More than a destination: It is a state of mind. Luxury boutique with curated designer and vintage collections for men and women.' },

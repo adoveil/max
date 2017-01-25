@@ -17,12 +17,9 @@ export default class TemporaryShops extends React.Component {
           Temporary Shops
         </div>
         <ul className={styles.list}>
-          <li>
-            <span>Off-White C/o Virgil Abloh</span>
-            <sup>TM</sup>
-          </li>
           <li>Daft Punk</li>
-          <li>Mathieu Cesar</li>
+          <li>Kith</li>
+          <li>Yeezy</li>
           <li>Mike Amiri</li>
           <li>Enfants Riches Déprimés</li>
           <li>Fear of God</li>
