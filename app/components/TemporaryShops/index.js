@@ -19,7 +19,6 @@ export default class TemporaryShops extends React.Component {
         <ul className={styles.list}>
           <li>Daft Punk</li>
           <li>Kith</li>
-          <li>Yeezy</li>
           <li>Mike Amiri</li>
           <li>Enfants Riches Déprimés</li>
           <li>Fear of God</li>
